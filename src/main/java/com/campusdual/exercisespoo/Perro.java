@@ -15,7 +15,7 @@ public class Perro {
         this.color = color;
     }
 
-    public void ladrar(){
+    protected void ladrar(){
         System.out.println("Guau! Guau!");
     }
 
@@ -23,4 +23,5 @@ public class Perro {
         this.ladrar();
         System.out.println(this.nombre);
     }
+    
 }
