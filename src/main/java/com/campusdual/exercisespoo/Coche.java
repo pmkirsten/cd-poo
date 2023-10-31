@@ -7,6 +7,7 @@ public class Coche {
     public String combustible;
     public int velocidad = 0;
     public int revoluciones = 0;
+    public int giro = 0;
 
     public Coche(String marca, String modelo, int velocidadMaxima, String combustible) {
         this.marca = marca;
@@ -44,10 +45,19 @@ public class Coche {
 
     public void girarVolante(int gradosDeGiro) {
         if (gradosDeGiro < 0) {
-            System.out.println("Giro a la izquierda ");
-        } else {
-            System.out.println("Giro a la derecha ");
+            if (gradosDeGiro < -45){
+                gradosDeGiro = -45;
+            }
+            System.out.println("Giro a la izquierda.");
+        } else if (gradosDeGiro > 0) {
+            if (gradosDeGiro > 45){
+                gradosDeGiro = 45;
+            }
+            System.out.println("Giro a la derecha.");
+        } else{
+            System.out.println("Pongo las ruedas rectas");
         }
+        this.giro = gradosDeGiro;
     }
 
     public void marchaAtras() {
@@ -55,8 +65,8 @@ public class Coche {
     }
 
     public void mostrarDetalles() {
-        System.out.println(this.marca + " " + this.modelo + ". Máx " + this.velocidadMaxima + " km/h. " + this.combustible);
-        System.out.println(this.velocidad + " km/h - " + this.revoluciones + " RPM");
+        System.out.println(this.marca + " " + this.modelo + ". Máx " + this.velocidadMaxima + " km/h. " + this.combustible+".");
+        System.out.println(this.velocidad + " km/h - " + this.revoluciones + " RPM - " + this.giro + "º de giro.");
     }
 
     public static void main(String[] args) {
@@ -82,6 +92,22 @@ public class Coche {
         miCoche.mostrarDetalles();
         System.out.println("== APAGO EL COCHE ==");
         miCoche.apagar();
+        System.out.println("== MUESTRO LOS DETALLES DEL COCHE ==");
+        miCoche.mostrarDetalles();
+        System.out.println("== GIRAMOS EL VOLANTE ==");
+        miCoche.girarVolante(-35);
+        System.out.println("== MUESTRO LOS DETALLES DEL COCHE ==");
+        miCoche.mostrarDetalles();
+        System.out.println("== GIRAMOS EL VOLANTE ==");
+        miCoche.girarVolante(50);
+        System.out.println("== MUESTRO LOS DETALLES DEL COCHE ==");
+        miCoche.mostrarDetalles();
+        System.out.println("== GIRAMOS EL VOLANTE ==");
+        miCoche.girarVolante(0);
+        System.out.println("== MUESTRO LOS DETALLES DEL COCHE ==");
+        miCoche.mostrarDetalles();
+        System.out.println("== GIRAMOS EL VOLANTE ==");
+        miCoche.girarVolante(470);
         System.out.println("== MUESTRO LOS DETALLES DEL COCHE ==");
         miCoche.mostrarDetalles();
     }
