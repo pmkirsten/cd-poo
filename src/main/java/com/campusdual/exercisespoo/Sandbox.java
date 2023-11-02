@@ -1,18 +1,20 @@
 package com.campusdual.exercisespoo;
 
+import com.campusdual.exercisespoo.exercise14.Doctor;
+import com.campusdual.exercisespoo.exercise14.Person;
+import com.campusdual.exercisespoo.exercise14.PoliceOfficer;
+import com.campusdual.exercisespoo.exercise14.Teacher;
+
 public class Sandbox {
 
     public static void main(String[] args) {
-
-        Perro perro1 = new Perro(90, false, "Husky", "Balto", "Blanco");
-
-//        perro1.ladrar();
-//
-//        perro1.presentarse();
-
-        System.out.println(perro1.nombre);
-        System.out.println(perro1.raza);
-        System.out.println(perro1.color);
-
+        Person p = new Person("John", "Doe");
+        Teacher t = new Teacher("María", "Montessori", "Educación");
+        PoliceOfficer pO = new PoliceOfficer("Jake", "Peralta", "B-99");
+        Doctor d = new Doctor("Gregory", "House", "Nefrología e infectología");
+        p.getDetails();
+        t.getDetails();
+        pO.getDetails();
+        d.getDetails();
     }
 }
