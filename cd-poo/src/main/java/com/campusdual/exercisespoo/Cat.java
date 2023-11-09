@@ -22,7 +22,7 @@ public class Cat {
 
    Crea un método estático que cambie la edad del gato y otro no estático que permita recuperar ese valor cuando se invoque
 
-   Crea un método no estático que castre a los gatos y otro no estático, llamado isCastrated, que devuelva su estado
+   Crea un método no estático que pueda castrar a los gatos y otro no estático, llamado isCastrated, que devuelva su estado
 
    Crea un método no estático llamado catDetails() que muestre todas las características de un gato (sé original en la presentación de
    los datos, dale un poco de arte)
@@ -97,9 +97,9 @@ public class Cat {
     return Cat.age; //fijaos cómo afecta el hecho de que la propiedad sea estática, se accede a través de la clase
   }
 
-  //Crea un método no estático que castre a los gatos y otro no estático, llamado isCastrated, que devuelva su estado
-  public void castration(){
-    this.castrated = true;
+  //Crea un método no estático que pueda castrar a los gatos y otro no estático, llamado isCastrated, que devuelva su estado
+  public void castration(boolean castrated){
+    this.castrated = castrated;
   }
 
   public boolean isCastrated() {
@@ -116,7 +116,7 @@ public class Cat {
         + "\t** Edad: " + this.getAge() + " **\n" //es estática y no podemos usar this, pero tenemos un método que nos lo proporciona
         + "\t** Pelo: " + this.hair + " **\n"
         + "\t** Color: " + Cat.colour + " **\n" //no podemos usar this ni tenemos un método, por tanto al ser estática usamos la clase
-        + "\t** Está castrado?: " + this.isCastrated() + " **\n"
+        + "\t** Está castrado?: " + (this.isCastrated() ? "Sí lo está :(" : "No lo está :)") + " **\n"
         + "\t** Color de ojos: " + this.eyeColor + " **\n"
         +"****************************************\n\n");
         //fijaos que va a mostrar el color del pelo y la edad de la clase original, no del objeto
@@ -132,8 +132,9 @@ public class Cat {
     Cat rataPeluda = new Cat("rata peluda", "esfinge", "macho", 7, "ninguno", "gris", false);
 
     //Castra a los dos primeros gatos cambiando su booleano a true. Deja el otro gato sin castrar (false)
-    micifu.castration();
-    patitas.castration();
+    micifu.castration(true);
+    patitas.castration(true);
+    rataPeluda.castration(false);
 
     //Cámbiale el color del pelo a los dos primeros gatos
     //micifu.setColour --> NO PODEMOS! El método es estático y hay que acceder a través de la clase

@@ -94,6 +94,7 @@ public abstract class Merchandise {
 
   //RESTO DE MÉTODOS
   public String getLocation() {
+
     StringBuilder builder = new StringBuilder();
 
     builder.append("Z - ");
