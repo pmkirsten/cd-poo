@@ -41,7 +41,7 @@ public class Arrays03 {
       System.out.println();
     }
 
-    //Recorremos el array tridimensional con tres for
+    //Recorremos el array tridimensional con dos for
     System.out.println("\n\nSuma Array tridimensional");
     for(int i = 0; i < 5; i++) {
       for(int j = 0; j < 5; j++) {

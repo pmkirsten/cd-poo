@@ -30,7 +30,6 @@ public class FreshMerchandise extends Merchandise {
 
   @Override
   public Object getSpecificData() {
-
     StringBuilder builder = new StringBuilder();
 
     builder.append("Localización: ");
