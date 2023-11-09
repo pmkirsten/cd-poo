@@ -1,4 +1,4 @@
-package com.campusdual.util;
+package com.campusdual.exercisespoo.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
