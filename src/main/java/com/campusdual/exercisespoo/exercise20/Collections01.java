@@ -15,10 +15,18 @@ public class Collections01 {
 
         stringList.add(new Person("John", "Smith"));
         stringList.add(new Teacher("María", "Montessori", "Educación"));
-        stringList.add(new PoliceOfficer("Jack", "Peralta", "B-99"));
+        stringList.add(new PoliceOfficer("Jake", "Peralta", "B-99"));
         stringList.add(new Doctor("Gregory", "House", "Nefrología e infectología"));
 
-        for (Person p : stringList) {
+//        for (Person p : stringList) {
+//            p.getDetails();
+//        }
+
+//        for (int i = 0; i < stringList.size(); i++){
+//            stringList.get(i).getDetails();
+//        }
+
+        for( Person p : stringList){
             p.getDetails();
         }
     }
