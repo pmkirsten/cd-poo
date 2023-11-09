@@ -23,5 +23,9 @@ public class Exercise23 {
 
         System.out.println("Contiene la clave \"police\": " + customMap.containsKey("police"));
         System.out.println("Contiene la clave \"teacher\": " + customMap.containsKey("teacher"));
+
+        customMap.put("police", new PoliceOfficer("Charles", "Boyle", "B-99"));
+        System.out.println("Contiene la clave \"police\": " + customMap.containsKey("police"));
+        customMap.get("police").getDetails();
     }
 }
